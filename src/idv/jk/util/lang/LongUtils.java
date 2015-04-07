@@ -5,4 +5,27 @@ package idv.jk.util.lang;
  */
 public class LongUtils
 {
+    public static int[] spitLongToIntArray(long inNumber)
+    {
+        String strNumber = String.valueOf(inNumber);
+
+        int length = strNumber.length();
+        int[] results = new int[length];
+
+        for(int i = 0; i < length; i++)
+        {
+            results[i] = Character.getNumericValue( strNumber.charAt(i) );
+        }
+
+        return results;
+    }
+
+    //test
+    public static void main(String[] argv)
+    {
+        for(int i : spitLongToIntArray(-5678))
+        {
+            System.out.print(i + ",");
+        }
+    }
 }
