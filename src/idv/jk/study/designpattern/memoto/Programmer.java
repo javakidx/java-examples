@@ -5,7 +5,13 @@ package idv.jk.study.designpattern.memoto;
  */
 public class Programmer
 {
+    /**
+     * 生命值
+     */
     private int hitPoint;
+    /**
+     * 憤怒條
+     */
     private int angryPoint;
 
     private BodyStateMemoto mBodyStateMemoto;
