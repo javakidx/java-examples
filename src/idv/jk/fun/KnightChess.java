@@ -9,6 +9,13 @@ public class KnightChess
     {
         int[][] chess = new int[8][8];
 
+        for(int i = 0; i < chess.length; i++)
+        {
+            for(int j = 0; j < chess[i].length; j++)
+            {
+                System.out.printf("%d,", chess[i][j]);
+            }
+        }
         int i = 4;
         int j = 5;
         for(int k = 1; k <= 64; k++ )
