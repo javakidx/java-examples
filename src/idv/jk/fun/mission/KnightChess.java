@@ -1,4 +1,4 @@
-package idv.jk.fun;
+package idv.jk.fun.mission;
 
 /**
  * Created by bioyang on 2015/10/15.
