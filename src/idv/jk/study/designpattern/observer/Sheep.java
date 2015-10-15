@@ -15,6 +15,6 @@ public class Sheep extends Observer
     @Override
     public void update()
     {
-        System.out.printf("通知 %s：%s\r\n", mName, mSubject.getMessage());
+        System.out.printf("通知 %s：%s%n", mName, mSubject.getMessage());
     }
 }
