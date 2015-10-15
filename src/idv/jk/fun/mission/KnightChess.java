@@ -7,25 +7,34 @@ public class KnightChess
 {
     public static void main(String[] args)
     {
-        int[][] chess = new int[8][8];
+        ChessBoard board = new ChessBoard();
+        Knight knight = new Knight(board);
 
-        for(int i = 0; i < chess.length; i++)
+        Position nowPosition = new Position(0, 0);
+
+        if(!knight.checkStepValid(nowPosition))
         {
-            for(int j = 0; j < chess[i].length; j++)
-            {
-                System.out.printf("%d,", chess[i][j]);
-            }
+            System.out.printf("起點[%d, %d]位置有誤", nowPosition.getX(), nowPosition.getY());
+            return;
         }
-        int i = 4;
-        int j = 5;
         for(int k = 1; k <= 64; k++ )
         {
+            board.mark(nowPosition.getX(), nowPosition.getY(), k);
+            nowPosition = knight.moveToNextSteop(nowPosition);
 
+            if(nowPosition == null)
+            {
+                break;
+            }
         }
-    }
 
-    public void knightStep(int i, int j, int k, int[][] chessBoard)
-    {
-
+        for(int[] row : board.getChessBoard())
+        {
+            for(int square : row)
+            {
+                System.out.printf("%d ", square);
+            }
+            System.out.println();
+        }
     }
 }
