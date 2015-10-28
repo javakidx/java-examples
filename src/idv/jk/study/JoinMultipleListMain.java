@@ -41,6 +41,7 @@ public class JoinMultipleListMain
             }
         }
 
+        //You will need a condition to end the recursion when you are using recursive function.
         if(thisList.isEmpty())
         {
             return newStringList;
