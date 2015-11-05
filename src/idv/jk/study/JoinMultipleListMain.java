@@ -16,14 +16,14 @@ public class JoinMultipleListMain
 
         Queue<List<String>> theQueue = new LinkedList<>(Arrays.asList(numberList, alphabetList, symbolicList));
 
-        List<String> newStringList = JoinMultipleListMain.joinStringPeice(theQueue.poll(), theQueue);
+        List<String> newStringList = JoinMultipleListMain.joinStringPeices(theQueue.poll(), theQueue);
         for (String s : newStringList)
         {
             System.out.print(s + "\t");
         }
     }
 
-    public static List<String> joinStringPeice(List<String> stringList1,  Queue<List<String>> listQueue)
+    public static List<String> joinStringPeices(List<String> stringList1,  Queue<List<String>> listQueue)
     {
         List<String> newStringList = new ArrayList<>();
         if(listQueue.isEmpty())
@@ -46,6 +46,6 @@ public class JoinMultipleListMain
         {
             return newStringList;
         }
-        return joinStringPeice(newStringList, listQueue);
+        return joinStringPeices(newStringList, listQueue);
     }
 }
